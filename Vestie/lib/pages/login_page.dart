@@ -66,7 +66,7 @@ class LoginPageState extends State<LoginPage>{
             SizedBox(height: 8.0),
             LoginTextFiled(label_text:"password",prefix_icon:pwIcon,obscureText_value:true,onChangeFunc:pwInputChange,),
             SizedBox(height: 16.0),
-            LongRoundedButton(btn_title: "Login", onPressedFunc: login),
+            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: 0xFF4E44EC,),
             SizedBox(height: 14.0),
             Text(
               '회원가입',

@@ -18,6 +18,7 @@ class SurveyListPage extends StatefulWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body:Container(
+        color: Colors.white,
         child:
         Column(children: [
           pageTitleWidget(title: "설문조사 참여"),

@@ -6,7 +6,7 @@ import '../widget/widgets4AllPage/underbar/bottomBarWidget.dart';
 //pages
 import '../pages/login_page.dart';
 import '../pages/surveyList_page.dart'; //index2
-import '../pages/surveyEnroll_page.dart';//index3 작성 페이지
+import '../pages/surveyRegister_page.dart';//index3 작성 페이지
 import '../pages/surveyResult_page.dart';
 import '../pages/userInfo_page.dart';
 
@@ -28,7 +28,7 @@ class AppfirstPagesState extends State<AppfirstPages> {
           children: <Widget>[
             LoginPage(),
             SurveyListPage(),
-            SurveyEnrollPage(),
+            SurveyRegisterPage(),
             SurveyResultPage(),
             UserInfoPage()
 

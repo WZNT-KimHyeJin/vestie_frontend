@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 //widgets
 
 //pages
-import '../../pages/surveyList_page.dart';
-import '../../pages/surveyRegisterComplete_page.dart';
+import '../../pages/SurveyParticipate/surveyList_page.dart';
+import '../../pages/appFirstPage.dart';
+import '../../pages/SurveyRegister/surveyRegisterComplete_page.dart';
 
 class SurveyRegisterTopBar extends StatelessWidget {
 
@@ -13,7 +14,7 @@ class SurveyRegisterTopBar extends StatelessWidget {
 
     void move2SurveyList(){
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context) => SurveyListPage()));
+          MaterialPageRoute(builder: (context) => AppfirstPages()));
     }
 
     void move2CompleteRegister(){

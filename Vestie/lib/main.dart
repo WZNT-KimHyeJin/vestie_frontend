@@ -24,13 +24,13 @@ class MyApp extends StatelessWidget {
         fontFamily: 'text',
 
       ),
-        initialRoute: '/',
-        routes: {
-          '/login': (context) => LoginPage(),
-          '/signUp': (context) => SignUpPage(),
-          '/firstApp': (context) => AppfirstPages(),
-        }// 특정 페이지인 FirstAppScreen 등록
-
+        home: LoginPage(),
+        // initialRoute: '/',
+        // routes: {
+        //   '/login': (context) => LoginPage(),
+        //   '/signUp': (context) => SignUpPage(),
+        //   '/firstApp': (context) => AppfirstPages(),
+        // }// 특정 페이지인 FirstAppScreen 등록
     );
   }
 }

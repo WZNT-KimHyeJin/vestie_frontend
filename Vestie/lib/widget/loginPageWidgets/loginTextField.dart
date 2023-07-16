@@ -29,6 +29,9 @@ class LoginTextFiledState extends State<LoginTextFiled> {
   late bool obscureText_value;
   String _textFieldValue = '';
 
+  final FocusNode _focusNode = FocusNode();
+  bool _isFocused = false;
+
   @override
   void initState(){
     super.initState();
@@ -43,6 +46,7 @@ class LoginTextFiledState extends State<LoginTextFiled> {
     return Container(
       height: 50,
       child:TextField(
+        focusNode: _focusNode,
         onChanged: (value){
           setState(() {
             _textFieldValue = value;
@@ -52,6 +56,7 @@ class LoginTextFiledState extends State<LoginTextFiled> {
         obscureText: obscureText_value,
         decoration: InputDecoration(
           prefixIcon: prefix_icon,
+
           labelText: label_text,
           labelStyle: TextStyle(
             color: Color(0XFF6E78FF),

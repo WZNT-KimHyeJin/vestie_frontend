@@ -20,8 +20,8 @@ class LoginPageState extends State<LoginPage>{
   String userId ='';
   String pw ='';
 
-  Icon idIcon = Icon(Icons.person_outlined,color: Color(0xFF6A76FF));
-  Icon pwIcon = Icon(Icons.lock_outline_rounded,color: Color(0xFF6A76FF));
+  Icon idIcon = Icon(Icons.person_outline_sharp,color: Color(TextBright));
+  Icon pwIcon = Icon(Icons.lock_outline_rounded,color: Color(TextBright));
 
   void idInputChange(String value){
     setState(() {

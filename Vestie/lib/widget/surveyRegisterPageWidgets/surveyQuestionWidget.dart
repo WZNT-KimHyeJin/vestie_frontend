@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 //widgets
 import 'shortAnswerWidget.dart';
+import 'choiceAnswerWidget/choiceAnswerWidget.dart';
 
 class SurveyQuestionWidget extends StatefulWidget {
 
@@ -45,7 +46,7 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
             ),
 
           ),
-          Container( // 질문 textField + 주관 객관식
+          Container( // 질문 textField + 드롭박스
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -100,10 +101,10 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
                 )
               ],
             ),
-
           ),
           Container(// 질문 mode 별 widget
-            child: ShortAnswerWidget(),
+            // height: ,
+            child: ChoiceAnswerWidget(),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 10, 0, 10),

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+import 'package:vestie/pages/Login_SignUp/signUp_page.dart';
 
 //widgets
 import '../../widget/widgets4AllPage/buttons/longRoundedButton.dart';
@@ -37,6 +37,12 @@ class LoginPageState extends State<LoginPage>{
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => AppfirstPages()));
   }
+
+  void move2SignUp(){
+    Navigator.pushReplacement(context,
+        MaterialPageRoute(builder: (context) => SignUpPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,13 +77,15 @@ class LoginPageState extends State<LoginPage>{
             SizedBox(height: 16.0),
             LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: 0xFF4E44EC,),
             SizedBox(height: 14.0),
-            Text(
-              '회원가입',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 11,
+            TextButton(onPressed: move2SignUp,
+              child: Text(
+                '회원가입',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 11,
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),

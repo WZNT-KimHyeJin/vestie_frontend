@@ -82,8 +82,10 @@ class SignUpTextFiledState extends State<SignUpTextFiled> {
               ),
             )
           ],)
+
     );
   }
 
 
 }
+

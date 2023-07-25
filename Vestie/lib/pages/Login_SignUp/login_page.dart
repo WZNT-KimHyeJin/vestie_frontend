@@ -2,6 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:vestie/pages/Login_SignUp/signUp_page.dart';
 
+import 'package:vestie/services/settingValues.dart';
+
+
+
 //widgets
 import '../../widget/widgets4AllPage/buttons/longRoundedButton.dart';
 import '../../widget/loginPageWidgets/loginTextField.dart';
@@ -75,7 +79,8 @@ class LoginPageState extends State<LoginPage>{
             SizedBox(height: 8.0),
             LoginTextFiled(label_text:"password",prefix_icon:pwIcon,obscureText_value:true,onChangeFunc:pwInputChange,),
             SizedBox(height: 16.0),
-            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: 0xFF4E44EC,),
+            // LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright,bnt_color: LoginBtn),
+            LongRoundedButton(btn_title: "Login", onPressedFunc: login,text_color: TextBright),
             SizedBox(height: 14.0),
             TextButton(onPressed: move2SignUp,
               child: Text(
@@ -86,6 +91,7 @@ class LoginPageState extends State<LoginPage>{
                 ),
               ),
             )
+
           ],
         ),
       ),

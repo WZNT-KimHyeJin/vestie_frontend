@@ -28,11 +28,15 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
   }
 
 
-
   @override
   Widget build(BuildContext context) {
     return Container(//전체 container
-
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8.0),
+        color: Color(0xFFF4F5FC),
+      ),
+      margin: EdgeInsets.fromLTRB(15,7,15,7),
+      padding: EdgeInsetsDirectional.fromSTEB(30, 10, 30, 5),
       child: Column(
         children: [
           Container( // 헤더 버튼
@@ -59,7 +63,7 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
                     style: TextStyle(fontSize: 18),
                     decoration: InputDecoration(
                         border: InputBorder.none,
-                        hintText: "URL",
+                        hintText: "질문",
                         hintStyle: TextStyle(fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Color(0xFF393939))),
@@ -102,9 +106,10 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
               ],
             ),
           ),
+          SizedBox(height: 10,),
           Container(// 질문 mode 별 widget
             // height: ,
-            child: ChoiceAnswerWidget(),
+            child: _selectedMode=='객관식'?ChoiceAnswerWidget():ShortAnswerWidget(),
           ),
           Container(
             margin: EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -117,7 +122,6 @@ class SurveyQuestionWidgetState extends State<SurveyQuestionWidget> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(Icons.message_rounded,color: Color(0xFF6875FF),size: 16,),
                 Icon(Icons.delete,color: Color(0xFF6875FF),size: 16),
               ],
             ),
